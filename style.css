@@ -8,7 +8,7 @@ Cream: hsl(30, 38%, 92%)
 
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@ button li {
   font-family: inherit;
 }
 body {
-  Font-size: 14px;
+  font-size: 14px;
   font-family: Montserrat, sans-serif;
   background-color: hsl(30, 38%, 92%);
   display: flex;
@@ -32,19 +32,18 @@ body {
   min-height: 100vh;
   margin: 0 1.5rem;
 }
-h1 {
-  color: hsl(212, 21%, 14%);  
+.title {
+  color: hsl(212, 21%, 14%);
 }
 .price {
   color: hsl(158, 36%, 37%);
 }
-h1 .price {
+.title .price {
   font-family: Fraunces, sans-serif;
 }
 
-h2 {
+.title {
   text-transform: uppercase;
-  font-size: 0.8rem;
   font-weight: 500;
   color: hsl(228, 12%, 48%);
   margin-bottom: 1rem;
@@ -60,23 +59,22 @@ p {
   max-width: 600px;
 }
 
-.container h1 {
+.container .subtitle {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-.container article:first-child {
+.container section:first-child {
   border-radius: 1rem 1rem 0 0;
 }
-.container article:last-child {
+.container .main-item {
   background-color: #fff;
   padding: 1.5rem;
- margin-top:0;
+  margin-top: 0;
   border-radius: 0 0 1rem 1rem;
 }
 
 .container p {
   margin-bottom: 2rem;
-
 }
 
 .container ul {
@@ -90,17 +88,17 @@ p {
 }
 
 .container ul li:nth-child(2) {
-color:hsl(228, 12%, 48%);
+  color: hsl(228, 12%, 48%);
 }
 
 .container .btn {
   background-color: hsl(158, 36%, 37%);
-  color:#fff;
+  color: #fff;
   font-weight: 700;
   padding: 1rem 2rem;
   font-size: 1rem;
-  width:100%;
-  border:none;
+  width: 100%;
+  border: none;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
@@ -129,24 +127,22 @@ color:hsl(228, 12%, 48%);
 @media (min-width: 640px) {
   .container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  .container article:first-child img {
+  .container section:first-child img {
     border-radius: 0.625rem 0 0 0.625rem;
   }
 
-    .container article:last-child {
-      border-radius: 0 0.625rem 0.625rem 0;
-      margin-top: 0;
-      padding: 1.5rem 1.5rem 0;
-    }
+  .container .main-item {
+    border-radius: 0 0.625rem 0.625rem 0;
+    margin-top: 0;
+    padding: 1.5rem 1.5rem 0;
+  }
 
-    picture img {
-      height: 100%;
-    }
-    .container p {
-      margin-bottom: 1rem;
-    }
-
-    
+  picture img {
+    height: 100%;
+  }
+  .container p {
+    margin-bottom: 1rem;
+  }
 }
